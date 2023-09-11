@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://tasting-note.vercel.app/api/user/register",
+        "https://tasting-note-no-auth-iyhc.vercel.app/api/user/register",
         {
           method: "POST",
           headers: {
