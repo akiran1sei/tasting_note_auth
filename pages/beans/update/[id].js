@@ -102,7 +102,7 @@ const UpDateItem = (props) => {
     try {
       const response = // フォームの入力値をサーバーに送信する
         await fetch(
-          `https://tasting-note-no-auth-iyhc.vercel.app/api/beans/update/${props.singleItem._id}`,
+          `https://tasting-note-no-auth.vercel.app/api/beans/update/${props.singleItem._id}`,
           {
             method: "POST",
             headers: {
@@ -1225,7 +1225,7 @@ const UpDateItem = (props) => {
 export default UpDateItem;
 export const getServerSideProps = async (context) => {
   const response = await fetch(
-    `https://tasting-note-no-auth-iyhc.vercel.app/api/beans/${context.query.id}`
+    `https://tasting-note-no-auth.vercel.app/api/beans/${context.query.id}`
   );
   const singleItem = await response.json();
 

@@ -252,7 +252,7 @@ const SelectionTop = (props) => {
 export default SelectionTop;
 export const getServerSideProps = async () => {
   const response = await fetch(
-    "https://tasting-note-no-auth-iyhc.vercel.app/api/beans/readall"
+    "https://tasting-note-no-auth.vercel.app/api/beans/readall"
   );
   const allItems = await response.json();
 
