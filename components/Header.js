@@ -51,12 +51,12 @@ export function Header() {
             <li className={styles.menu_item}>
               <Link href={"/beans/create"}>NEW</Link>
             </li>
-            <li className={styles.menu_item}>
+            {/* <li className={styles.menu_item}>
               <Link href={"/user/register"}>登録</Link>
             </li>
             <li className={styles.menu_item}>
               <Link href={"/user/login"}>ログイン</Link>
-            </li>
+            </li> */}
             {/* <li className={styles.menu_item}>
             <Link href={"/"}>一覧ページ</Link>
           </li>
