@@ -243,6 +243,7 @@
   margin: 1rem 0;
   text-align: center;
   color: var(--color-font-white);
+  cursor: pointer;
 }
 .menu_item:active {
   box-shadow: inset 4px 4px 0px 0px #33333340;
