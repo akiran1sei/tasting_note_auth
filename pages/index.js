@@ -1,12 +1,11 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import { useRouter } from "next/router";
+
 import Link from "next/link";
 import { useSession, signIn } from "next-auth/react";
 
 // const Home = () => {
 export default function Component() {
-  const router = useRouter();
   const { data: session } = useSession();
   if (!session) {
     return (
