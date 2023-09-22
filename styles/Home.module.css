@@ -1284,6 +1284,7 @@ grid-layout 768px
   font-size: x-large;
   box-shadow: 3px 3px 3px #3333334d;
 }
+.signin_btn:active,
 .login_btn:active,
 .start_btn:active,
 .register_btn:active {
@@ -1291,8 +1292,19 @@ grid-layout 768px
   box-shadow: inset 3px 3px 3px var(--color-black);
   transition-duration: 0.1s;
 }
+.signin_btn,
 .login_paragraph,
 .register_paragraph {
   padding: 1rem 0;
   text-align: center;
+}
+
+.signin_btn {
+  background: var(--color-bg-base);
+  padding: 0.5rem 1rem;
+  color: #666;
+  border: 1px solid var(--color-yellow);
+  border-radius: 5%;
+  font-size: x-large;
+  box-shadow: 3px 3px 3px #3333334d;
 }
