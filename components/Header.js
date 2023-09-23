@@ -53,7 +53,10 @@ export function Header() {
               {/* <li className={styles.menu_item}>
                 <Link href={"/"}>ログアウト</Link>
               </li> */}
-              <li className={styles.menu_item} onClick={() => signOut()}>
+              <li
+                className={styles.menu_item}
+                onClick={() => signOut({ callbackUrl: "/" })}
+              >
                 ログアウト
               </li>
             </ul>
