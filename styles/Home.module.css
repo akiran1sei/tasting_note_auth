@@ -96,6 +96,17 @@
   margin: 0 1rem;
 }
 
+/* ----------contents_shadow,edit_box ,edit_popup--------- */
+.contents_shadow {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--color-box-shadow);
+  z-index: 10;
+}
+
 /* 
 -----heading_title-----
  */
@@ -243,6 +254,7 @@
   margin: 1rem 0;
   text-align: center;
   color: var(--color-font-white);
+  cursor: pointer;
 }
 .menu_item:active {
   box-shadow: inset 4px 4px 0px 0px #33333340;
@@ -453,7 +465,8 @@ delete_popup
 削除パターン２
 
 */
-.delete_popup {
+.delete_popup,
+.edit_popup {
   width: 100%;
   height: 100%;
   display: block;
@@ -461,9 +474,10 @@ delete_popup
   top: 0;
   left: 0;
   right: 0;
-  background: var(--color-box-shadow);
 }
-.delete_box {
+
+.delete_box,
+.edit_box {
   width: 300px;
   height: 100px;
   display: flex;
@@ -1283,6 +1297,7 @@ grid-layout 768px
   font-size: x-large;
   box-shadow: 3px 3px 3px #3333334d;
 }
+.signin_btn:active,
 .login_btn:active,
 .start_btn:active,
 .register_btn:active {
@@ -1290,8 +1305,19 @@ grid-layout 768px
   box-shadow: inset 3px 3px 3px var(--color-black);
   transition-duration: 0.1s;
 }
+.signin_btn,
 .login_paragraph,
 .register_paragraph {
   padding: 1rem 0;
   text-align: center;
+}
+
+.signin_btn {
+  background: var(--color-bg-base);
+  padding: 0.5rem 1rem;
+  color: #666;
+  border: 1px solid var(--color-yellow);
+  border-radius: 5%;
+  font-size: x-large;
+  box-shadow: 3px 3px 3px #3333334d;
 }
