@@ -472,7 +472,9 @@ const New = () => {
                           </div>
                         </div>
                         <div className={styles.edit_item_message_box}>
-                          <label>memo</label>
+
+                          <label htmlFor="defects-message">memo</label>
+
                           <br />
                           <textarea
                             className={styles.edit_item_message}
@@ -499,7 +501,11 @@ const New = () => {
                           </div>
                         </div>
                         <div className={styles.edit_item_message_box}>
-                          <label>memo</label>
+
+                          <label htmlFor="cleancap-message">
+                           memo
+                          </label>
+
                           <br />
                           <textarea
                             className={styles.edit_item_message}
