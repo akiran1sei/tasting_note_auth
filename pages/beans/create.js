@@ -75,53 +75,50 @@ const New = () => {
       Number(defects);
     try {
       const response = // フォームの入力値をサーバーに送信する
-        await fetch(
-          "https://tasting-note-no-auth.vercel.app/api/beans/create",
-          {
-            method: "POST",
-            body: JSON.stringify({
-              coffee: coffee,
-              roast: roast,
-              roastMessage: roastMessage,
-              aromaDryStrength: aromaDryStrength,
-              aromaCrustStrength: aromaCrustStrength,
-              aromaBreakStrength: aromaBreakStrength,
-              aromaDryQuality: aromaDryQuality,
-              aromaCrustQuality: aromaCrustQuality,
-              aromaBreakQuality: aromaBreakQuality,
-              aromaMessage: aromaMessage,
-              defects: point * score * 4,
-              defectsMessage: defectsMessage,
-              cleancap: cleancap,
-              cleancapMessage: cleancapMessage,
-              sweet: sweet,
-              sweetMessage: sweetMessage,
-              acidity: acidity,
-              acidityMessage: acidityMessage,
-              acidityStrength: acidityStrength,
-              mouthfeel: mouthfeel,
-              mouthfeelMessage: mouthfeelMessage,
-              bodyStrength: bodyStrength,
-              flavor: flavor,
-              flavorMessage: flavorMessage,
-              after: after,
-              afterMessage: afterMessage,
-              balance: balance,
-              balanceMessage: balanceMessage,
-              overall: overall,
-              total: Number(sum) + Number(36),
-              result: sum,
-              impression: impression,
-              username: username,
-              date: date,
-            }),
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-              authorization: `Bearer ${localStorage.getItem("token")}`,
-            },
-          }
-        );
+        await fetch("https://tasting-note-auth.vercel.app/api/beans/create", {
+          method: "POST",
+          body: JSON.stringify({
+            coffee: coffee,
+            roast: roast,
+            roastMessage: roastMessage,
+            aromaDryStrength: aromaDryStrength,
+            aromaCrustStrength: aromaCrustStrength,
+            aromaBreakStrength: aromaBreakStrength,
+            aromaDryQuality: aromaDryQuality,
+            aromaCrustQuality: aromaCrustQuality,
+            aromaBreakQuality: aromaBreakQuality,
+            aromaMessage: aromaMessage,
+            defects: point * score * 4,
+            defectsMessage: defectsMessage,
+            cleancap: cleancap,
+            cleancapMessage: cleancapMessage,
+            sweet: sweet,
+            sweetMessage: sweetMessage,
+            acidity: acidity,
+            acidityMessage: acidityMessage,
+            acidityStrength: acidityStrength,
+            mouthfeel: mouthfeel,
+            mouthfeelMessage: mouthfeelMessage,
+            bodyStrength: bodyStrength,
+            flavor: flavor,
+            flavorMessage: flavorMessage,
+            after: after,
+            afterMessage: afterMessage,
+            balance: balance,
+            balanceMessage: balanceMessage,
+            overall: overall,
+            total: Number(sum) + Number(36),
+            result: sum,
+            impression: impression,
+            username: username,
+            date: date,
+          }),
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
       // バリデーション
 
       if (!username) {
@@ -472,7 +469,6 @@ const New = () => {
                           </div>
                         </div>
                         <div className={styles.edit_item_message_box}>
-
                           <label htmlFor="defects-message">memo</label>
 
                           <br />
@@ -501,10 +497,7 @@ const New = () => {
                           </div>
                         </div>
                         <div className={styles.edit_item_message_box}>
-
-                          <label htmlFor="cleancap-message">
-                           memo
-                          </label>
+                          <label htmlFor="cleancap-message">memo</label>
 
                           <br />
                           <textarea

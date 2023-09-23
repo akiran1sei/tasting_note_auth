@@ -255,7 +255,7 @@ export default function Component(props) {
 
 export const getServerSideProps = async () => {
   const response = await fetch(
-    "https://tasting-note-no-auth.vercel.app/api/beans/readall"
+    "https://tasting-note-auth.vercel.app/api/beans/readall"
   );
   const allItems = await response.json();
 
