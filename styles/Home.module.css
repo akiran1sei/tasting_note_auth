@@ -96,6 +96,17 @@
   margin: 0 1rem;
 }
 
+/* ----------contents_shadow,edit_box ,edit_popup--------- */
+.contents_shadow {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--color-box-shadow);
+  z-index: 10;
+}
+
 /* 
 -----heading_title-----
  */
@@ -454,7 +465,8 @@ delete_popup
 削除パターン２
 
 */
-.delete_popup {
+.delete_popup,
+.edit_popup {
   width: 100%;
   height: 100%;
   display: block;
@@ -462,9 +474,10 @@ delete_popup
   top: 0;
   left: 0;
   right: 0;
-  background: var(--color-box-shadow);
 }
-.delete_box {
+
+.delete_box,
+.edit_box {
   width: 300px;
   height: 100px;
   display: flex;
