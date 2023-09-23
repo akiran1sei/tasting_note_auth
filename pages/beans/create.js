@@ -670,7 +670,7 @@ const New = () => {
                           onChange={(e) => setDefects(e.target.value)}
                         />
                         <div className={styles.edit_item_message_box}>
-                          <label htmlFor="defects-message"></label>memo
+                          <label htmlFor="defects-message">memo</label>
                           <br />
                           <textarea
                             className={styles.edit_item_message}
@@ -721,7 +721,7 @@ const New = () => {
 
                         <div className={styles.edit_item_message_box}>
                           <label htmlFor="cleancap-message">
-                            <label htmlFor="cleancap-message">memo</label>
+                           memo
                           </label>
                           <br />
                           <textarea
