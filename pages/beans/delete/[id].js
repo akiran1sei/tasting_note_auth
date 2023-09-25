@@ -12,7 +12,7 @@ const DeleteItem = (props) => {
 
     try {
       const response = await fetch(
-        `https://tasting-note-auth.vercel.app/api/beans/delete/${props.singleItem._id}`,
+        `http://localhost:3000/api/beans/delete/${props.singleItem._id}`,
         {
           method: "POST",
           headers: {
@@ -648,7 +648,7 @@ export default DeleteItem;
 
 export const getServerSideProps = async (context) => {
   const response = await fetch(
-    `https://tasting-note-auth.vercel.app/api/beans/${context.query.id}`
+    `http://localhost:3000/api/beans/${context.query.id}`
   );
   const singleItem = await response.json();
 
