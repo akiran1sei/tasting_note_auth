@@ -60,14 +60,14 @@ const UserSchema = new Schema({
     required: true,
   },
 });
-// const EmailSchema = new Schema({
-//   email: String,
-// });
+const EmailSchema = new Schema({
+  email: String,
+});
 //データーベースをdb変数に代入
 
 export const BeansModel =
   mongoose.models.Beans || mongoose.model("Beans", BeansSchema);
 export const UserModel =
   mongoose.models.User || mongoose.model("User", UserSchema);
-// export const EmailModel =
-//   mongoose.models.Email || mongoose.model("Email", EmailSchema);
+export const EmailModel =
+  mongoose.models.Email || mongoose.model("Email", EmailSchema);
