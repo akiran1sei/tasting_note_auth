@@ -202,7 +202,7 @@ export default function Component(props) {
     </div>
   ));
 
-  if (session) {
+  if (!session) {
     return (
       <>
         <Head>
@@ -219,8 +219,6 @@ export default function Component(props) {
             <div className={styles.main_contents}>
               <div className={styles.select}>
                 <h1 className={styles.heading_title}>SELECT</h1>
-
-                {ReadAll}
               </div>
             </div>
           </main>
@@ -244,6 +242,8 @@ export default function Component(props) {
             <div className={styles.main_contents}>
               <div className={styles.select}>
                 <h1 className={styles.heading_title}>SELECT</h1>
+
+                {ReadAll}
               </div>
             </div>
           </main>
