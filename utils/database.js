@@ -4,6 +4,8 @@ const USER_NAME = `akiran1sei`;
 const USER_PASSWD = `akiran1sei`;
 const HOST_NAME = `cluster0.dnleokd.mongodb.net`;
 const url = `mongodb+srv://${USER_NAME}:${USER_PASSWD}@${HOST_NAME}/${DB_NAME}?retryWrites=true&w=majority`;
+// const url =
+//   "mongodb+srv://akiran1sei:akiran1sei@cluster0.dnleokd.mongodb.net/tasting_note?retryWrites=true&w=majority";
 
 const connectDB = async () => {
   try {
